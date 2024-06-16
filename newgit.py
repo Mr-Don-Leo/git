@@ -9,6 +9,8 @@ arg_p = argparse.ArgumentParser(description="Content Tracker.")
 arg_sub_p = arg_p.add_subparsers(title="Commands", dest="command")
 arg_sub_p.required = True
 
+argsp = arg_p.add_parser("init", help="Initialize a new, empty repository.")
+
 def main(argv=sys.argv[1:]):
     args = arg_p.parse_args(argv)
 	# Case match for commands, if argument passed that matches a command, function executed. 
